@@ -1,8 +1,10 @@
+import { Router } from "./Router"
+
 function App() {
   return (
-    <div>
-      <h1>Teste</h1>
-    </div>
+    <>
+      <Router />
+    </>
   )
 }
 
