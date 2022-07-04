@@ -34,6 +34,12 @@ export const Logo = styled.h1`
   }
 `
 
-export const Favoritos = styled.a`
+export const Favorites = styled.a`
+  background-color: var(--btn-color);
+  padding: 0.62rem 1.25rem;
+  border-radius: 5px;
 
+  a {
+    color: var(--white-text);
+  }
 `
