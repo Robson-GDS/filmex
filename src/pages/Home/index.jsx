@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { NavLink } from "react-router-dom"
 
 import api from "../../services/api"
 
@@ -15,12 +16,24 @@ export function Home() {
           page: 1,
         }
       })
+
+      setMovies(response.data.results.slice(0, 6))
     }
 
     loadMovies();
   }, [])
 
   return (
-    <h1>Pagina Home</h1>
+    <div>
+      <div>
+        {movies.map(movie => (
+          <article key={movie.id}>
+            <strong>{movie.title}</strong>
+            <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title}/>
+            <NavLink to={`/movie/${movie.id}`}>Ver mais</NavLink>
+          </article>
+        ))}
+      </div>
+    </div>
   )
 }
