@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import { NavLink } from "react-router-dom"
+
+import styled from "styled-components"
 
 export const Container = styled.div`
   background-color: #dcdcdc;
@@ -35,22 +37,42 @@ export const MovieList = styled.div`
     }
   }
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--btn-color);
-    padding: 9px 0;
-    text-decoration: none;
-    color: var(--white-text);
-    margin-top: 9px;
-    border-radius: 4px;
+  img {
+    max-height: 28.125rem;
 
-    transition: filter 0.2s;
-
-    &:hover {
-      filter: brightness(0.8);
+    @media (max-width: 1050px) {
+      max-height: 25rem;
     }
+
+    @media (max-width: 900px) {
+      max-height: 23.125rem;
+    }
+
+    @media (max-width: 800px) {
+      max-height: 25rem;
+    }
+
+    @media (max-width: 550px) {
+      max-height: 37.5rem;
+    }
+  }
+`
+
+export const Navigate = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-color);
+  padding: 9px 0;
+  text-decoration: none;
+  color: var(--white-text);
+  margin-top: 9px;
+  border-radius: 4px;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
   }
 `
 

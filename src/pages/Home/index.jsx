@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
 
 import api from "../../services/api"
 import { limitTitle } from "../../services/limitTitle";
 
-import { Container, MovieList, Loading } from "./style"
+import {
+  Container,
+  MovieList,
+  Loading,
+  Navigate 
+} from "./style"
 
 export function Home() {
   const [movies, setMovies] = useState([]);
@@ -43,7 +47,7 @@ export function Home() {
           <article key={movie.id}>
             <strong>{limitTitle(movie.title)}</strong>
             <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title}/>
-            <NavLink to={`/movie/${movie.id}`}>Ver mais</NavLink>
+            <Navigate to={`/movie/${movie.id}`}>Ver mais</Navigate>
           </article>
         ))}
       </MovieList>
