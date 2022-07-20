@@ -38,7 +38,7 @@ export const MovieList = styled.div`
   }
 
   img {
-    max-height: 28.125rem;
+    max-height: 31.25rem;
 
     @media (max-width: 1050px) {
       max-height: 25rem;
@@ -49,11 +49,11 @@ export const MovieList = styled.div`
     }
 
     @media (max-width: 800px) {
-      max-height: 25rem;
+      max-height: 500px;
     }
 
     @media (max-width: 550px) {
-      max-height: 37.5rem;
+      max-height: 31.25rem;
     }
   }
 `

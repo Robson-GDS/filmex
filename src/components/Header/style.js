@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: var(--black-theme);
   height: 6rem;
+
+  @media (max-width: 400px) {
+    height: 12rem;
+  }
 `
 
 export const Content = styled.div`
@@ -15,6 +19,10 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 400px) {
+    height: 12rem;
+  }
+
   a {
     text-decoration: none;
 
@@ -23,6 +31,19 @@ export const Content = styled.div`
     &:hover {
       filter: brightness(0.8);
     }
+
+    @media (max-width: 400px) {
+      display: block;
+      text-align: center;
+
+      &:first-child {
+        padding: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    display: block;
   }
 `
 
@@ -41,5 +62,11 @@ export const Favorites = styled.a`
 
   a {
     color: var(--white-text);
+
+    @media (max-width: 400px) {
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
   }
 `
