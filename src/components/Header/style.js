@@ -64,9 +64,8 @@ export const Favorites = styled.a`
     color: var(--white-text);
 
     @media (max-width: 400px) {
-        font-size: 30px;
-        font-weight: bold;
-      }
+      font-size: 30px;
+      font-weight: bold;
     }
   }
 `

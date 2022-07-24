@@ -53,7 +53,7 @@ export const MovieList = styled.div`
     }
 
     @media (max-width: 550px) {
-      max-height: 31.25rem;
+      max-height: 40.62rem
     }
   }
 `
