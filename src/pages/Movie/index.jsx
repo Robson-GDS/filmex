@@ -14,6 +14,12 @@ export function Movie() {
           language: "pt-BR",
         }
       })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch(() => {
+        console.log("Filme nao encontrado!")
+      })
     }
 
     loadMovie();
