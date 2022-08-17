@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -55,17 +57,15 @@ export const Logo = styled.h1`
   }
 `
 
-export const Favorites = styled.a`
+export const Favorites = styled(NavLink)`
   background-color: var(--btn-color);
   padding: 0.62rem 1.25rem;
   border-radius: 5px;
 
-  a {
-    color: var(--white-text);
+  color: var(--white-text);
 
     @media (max-width: 400px) {
       font-size: 30px;
       font-weight: bold;
     }
-  }
 `

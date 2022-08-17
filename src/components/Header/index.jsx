@@ -9,9 +9,7 @@ export function Header() {
         <Logo>
           <NavLink to="/">Filmex</NavLink>
         </Logo>
-        <Favorites>
-          <NavLink to="/favorite">Meus filmes</NavLink>
-        </Favorites>
+        <Favorites to="/favorite">Meus filmes</Favorites>
       </Content>
     </Container>
   )
