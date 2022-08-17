@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
+import { Container, Content } from "./style";
+
 export function Favorite() {
   const [movies, setMovies] = useState([]);
 
