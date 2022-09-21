@@ -11,6 +11,15 @@ export function Favorite() {
     setMovies(JSON.parse(myList) || [])
   }, [])
 
+  function handleDelete(id) {
+    let filterMovies = movies.filter((item) => {
+      return (item.id !== id)
+    })
+
+    setMovies(filterMovies)
+    localStorage.setItem("@filmex", JSON.stringify(filterMovies))
+  }
+
   return (
     <Container>
       <Content>
@@ -25,7 +34,7 @@ export function Favorite() {
                 <span>{item.title}</span>
                 <div>
                   <Link to={`/movie/${item.id}`}>Ver detalhes</Link>
-                  <button >Excluir</button>
+                  <button onClick={() => handleDelete(item.id)}>Excluir</button>
                 </div>
               </li>
             )
